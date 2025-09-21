@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amar Vishwakarma | Web Developer</title>
+  <style>
+    /* ==== Global Styles ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a { color: #58a6ff; text-decoration: none; }
+    h1, h2, h3 { font-weight: 600; }
+
+    /* ==== Navbar ==== */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(13, 17, 23, 0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      z-index: 1000;
+      border-bottom: 1px solid #161b22;
+    }
+    nav h1 { color: #58a6ff; font-size: 1.5rem; }
+    nav ul { display: flex; gap: 20px; list-style: none; }
+    nav ul li a { transition: 0.3s; }
+    nav ul li a:hover { color: #1f6feb; }
+
+    /* ==== Sections ==== */
+    section {
+      padding: 100px 10%;
+      min-height: 100vh;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3rem; color: #58a6ff; }
+    .hero p { max-width: 600px; margin: 15px auto; font-size: 1.1rem; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #58a6ff;
+      color: #fff;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #1f6feb; }
+
+    /* ==== Skills ==== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .skill {
+      background: #161b22;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 1px solid #30363d;
+      transition: 0.3s;
+    }
+    .skill:hover { background: #21262d; }
+
+    /* ==== Experience ==== */
+    .experience-card {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 15px 0;
+      border: 1px solid #30363d;
+      transition: transform 0.3s;
+    }
+    .experience-card:hover { transform: translateY(-5px); }
+
+    /* ==== Projects ==== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+    .project-card:hover { transform: translateY(-5px); }
+
+    /* ==== Contact ==== */
+    .contact-info {
+      text-align: center;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    /* ==== Animations ==== */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==== Responsive ==== */
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      nav { justify-content: center; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Amar Vishwakarma</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <h1>Hi, I'm Amar Vishwakarma</h1>
+    <p>Results-oriented Web Developer with 5+ years of experience building websites using HTML, CSS, JavaScript, WordPress, PHP, and MySQL.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" data-animate>
+    <h2>About Me</h2>
+    <p>Results-oriented, meticulous, and innovative Web Developer with over 5 years of experience. Adept at creating responsive, user-friendly websites and applications. Strong problem-solving skills and a passion for learning new technologies.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-animate>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">PHP</span>
+      <span class="skill">MySQL</span>
+      <span class="skill">WordPress</span>
+      <span class="skill">Webflow</span>
+      <span class="skill">Shopify</span>
+      <span class="skill">Wix</span>
+      <span class="skill">SEO</span>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" data-animate>
+    <h2>Experience</h2>
+    <div class="experience-card">
+      <h3>WordPress Developer</h3>
+      <p><em>SEOvalley Solution Pvt. Ltd. | 2021 – Present</em></p>
+      <ul>
+        <li>Develop and maintain WordPress themes with custom HTML templates.</li>
+        <li>Enhance and troubleshoot themes, plugins, and custom code across websites.</li>
+        <li>Delivered technical solutions for CMS platforms like WordPress, Magento, Webflow, Duda, Wix, Shopify.</li>
+        <li>Focused on SEO development, optimization, and responsiveness.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-animate>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>SEO Friendly Business Website</h3>
+        <p>Developed a responsive business website with WordPress + custom PHP for SEO optimization.</p>
+        <a href="#">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>E-Commerce Store</h3>
+        <p>Created a custom WooCommerce store with dynamic product filtering and secure payment integration.</p>
+        <a href="#">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Built a modern portfolio site with HTML, CSS, JS showcasing projects and skills.</p>
+        <a href="#">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-animate>
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>📞 Mobile: 7974033626</p>
+      <p>📧 Email: <a href="mailto:amarv2912@gmail.com">amarv2912@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- JS for animations -->
+  <script>
+    const elements = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
